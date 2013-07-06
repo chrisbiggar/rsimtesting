@@ -1,0 +1,8 @@
+http://www.pyglet.org/doc/api/index.html
+http://www.pyglet.org/doc/programming_guide/working_with_the_keyboard.html
+http://phors.locost7.info/contents.htm
+http://phors.locost7.info/phors07.htm
+http://www.codinghorror.com/blog/2008/06/physics-based-games.html
+http://www.racer.nl/reference/carphys.htm
+http://www.instructables.com/community/Racing-Game-Physics/
+http://www.asawicki.info/Mirror/Car%20Physics%20for%20Games/Car%20Physics%20for%20Games.html
