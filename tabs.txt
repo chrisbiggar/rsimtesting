@@ -1,8 +1,8 @@
-http://www.pyglet.org/doc/api/index.html
-http://www.pyglet.org/doc/programming_guide/working_with_the_keyboard.html
 http://phors.locost7.info/contents.htm
-http://phors.locost7.info/phors07.htm
-http://www.codinghorror.com/blog/2008/06/physics-based-games.html
 http://www.racer.nl/reference/carphys.htm
 http://www.instructables.com/community/Racing-Game-Physics/
 http://www.asawicki.info/Mirror/Car%20Physics%20for%20Games/Car%20Physics%20for%20Games.html
+https://www.google.ca/webhp?sourceid=chrome-instant&rlz=1C1CHFX_enCA540CA541&ion=1&ie=UTF-8#safe=off&rlz=1C1CHFX_enCA540CA541&q=game+physics+determining+velocity+from+direction&sa=X&ei=GtDYUfijEom5qAHq7ICQCg&ved=0CCgQ7xYoAA&bav=on.2,or.r_cp.r_qf.&bvm=bv.48705608,d.aWM&fp=c61c7b135be60a95&ion=1&biw=1517&bih=714
+http://www.rodedev.com/tutorials/gamephysics/
+http://www.pyglet.org/doc/api/index.html
+https://github.com/chrisbiggar/rsimtesting
