@@ -3,13 +3,13 @@ Created on 2013-07-04
 
 @author: chris_000
 '''
+import os
 import math
 import pyglet
 from pyglet.window import key
 from pyglet.sprite import Sprite
 
 class Car(Sprite):
-    
     def __init__(self, sim):
         self.sim = sim
         '''position'''
@@ -24,42 +24,39 @@ class Car(Sprite):
         
         self.dx = 25
         
-        self.FRICTION = 2.
-        self.POWER = 0.5
-        self.MAXSPEED = 10
+        self.FRICTION = 0.2
+        self.POWER = 1
+        self.BRAKEPOWER = 1.5
+        self.MAXSPEED = 30
         
         '''sprite'''
-        img = pyglet.image.load('res/car.png')
+        img = pyglet.image.load(os.path.join('res', 'car.png'))
+        img.anchor_x = img.width / 2
+        img.anchor_y = img.height / 4
         Sprite.__init__(self, img)
         #self.batch = sim.batch
-        self.rotation = 90
+        #self.rotation = 90
         
     def update(self):
-        #print "update"
         if self.sim.keys[key.UP]:
-            print "up"
-            self.speed = 10
+            if self.speed < self.MAXSPEED:
+                self.speed += self.POWER
         elif self.sim.keys[key.DOWN]:
-            print "down"
-            self.speed = -10
-        else:
-            self.speed = 0
+            if self.speed > 0:
+                self.speed -= self.BRAKEPOWER
+            else:
+                self.speed = 0
         if self.sim.keys[key.LEFT]:
-            self.angle += 22.5
-            self.rotation -= 22.5
+            if self.speed > 1:
+                self.angle += 3.5
         if self.sim.keys[key.RIGHT]:
-            self.angle -= 22.5
-            self.rotation += 22.5
+            if self.speed > 1:
+                self.angle -= 3.5
             
-        #if self.vely > 0:
-            #self.vely -= self.friction
-        
-        '''if self.vely < 0:
-            self.vely += self.friction
-        elif self.vely > 0:
-            self.vely -= self.friction'''
+        if self.speed > 0:
+            self.speed -= self.FRICTION
             
-        #self.rotation = self.angle + 90
+        self.rotation = (360 - self.angle) + 90
         
         scale_x = math.cos(math.radians(self.angle))
         scale_y = math.sin(math.radians(self.angle))
